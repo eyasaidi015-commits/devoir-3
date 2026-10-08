@@ -1,0 +1,30 @@
+<div class="container mt-4">
+  <div class="card shadow">
+    <div class="card-body">
+      <h3>Ajouter une pharmacie</h3>
+      <form (ngSubmit)="addPharmacie()">
+        <div class="mb-3">
+          <label class="form-label">ID</label>
+          <input type="number" class="form-control" name="idPharmacie" [(ngModel)]="newPharmacie.idPharmacie" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Nom</label>
+          <input type="text" class="form-control" name="nomPharmacie" [(ngModel)]="newPharmacie.nomPharmacie" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Adresse</label>
+          <input type="text" class="form-control" name="adressePharmacie" [(ngModel)]="newPharmacie.adressePharmacie" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Téléphone</label>
+          <input type="text" class="form-control" name="telephonePharmacie" [(ngModel)]="newPharmacie.telephonePharmacie" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Date d'ouverture</label>
+          <input type="date" class="form-control" name="dateOuverture" [(ngModel)]="newPharmacie.dateOuverture" required>
+        </div>
+        <button type="submit" class="btn btn-success">Ajouter</button>
+      </form>
+    </div>
+  </div>
+</div>

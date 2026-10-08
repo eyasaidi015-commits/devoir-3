@@ -1,0 +1,35 @@
+<div class="container mt-4">
+  <div class="card shadow">
+    <div class="card-body">
+      <h2>Nombre : {{ pharmacies.length }}</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>N°</th>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Adresse</th>
+            <th>Téléphone</th>
+            <th>Date d'ouverture</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (p of pharmacies; track p.idPharmacie; let i = $index) {
+            <tr>
+              <td>{{ i }}</td>
+              <td>{{ p.idPharmacie }}</td>
+              <td>{{ p.nomPharmacie }}</td>
+              <td>{{ p.adressePharmacie }}</td>
+              <td>{{ p.telephonePharmacie }}</td>
+              <td>{{ p.dateOuverture | date: 'dd/MM/yyyy' }}</td>
+              <td>
+                <button class="btn btn-danger btn-sm" (click)="supprimerPharmacie(p)">Supprimer</button>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
