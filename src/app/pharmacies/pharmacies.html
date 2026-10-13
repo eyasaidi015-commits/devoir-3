@@ -25,6 +25,7 @@
               <td>{{ p.dateOuverture | date: 'dd/MM/yyyy' }}</td>
               <td>
                 <button class="btn btn-danger btn-sm" (click)="supprimerPharmacie(p)">Supprimer</button>
+                <a class="btn btn-success btn-sm ms-2" [routerLink]="['/updatePharmacie', p.idPharmacie]">Modifier</a>
               </td>
             </tr>
           }

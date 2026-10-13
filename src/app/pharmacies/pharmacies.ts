@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { DatePipe } from '@angular/common';
+import { RouterLink } from '@angular/router';
 import { Pharmacie } from '../model/pharmacie.model';
 import { PharmacieService } from '../services/pharmacie-service';
 
 @Component({
   selector: 'app-pharmacies',
-  imports: [DatePipe],
+  imports: [DatePipe, RouterLink],
   templateUrl: './pharmacies.html',
   styleUrl: './pharmacies.css'
 })
